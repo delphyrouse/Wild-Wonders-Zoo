@@ -1,0 +1,478 @@
+/* Custom styles for Wild Wonders Zoo */
+:root {
+    --primary-green: #4caf50;
+    --light-green: rgba(76, 175, 80, 0.6);
+    --dark-green: #234e25;
+}
+
+/* Navigation */
+.custom-navbar {
+    max-width: 1300px;
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c1c1c1;
+    border-radius: 50px;
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-green) !important;
+}
+
+.navbar-brand img {
+    width: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.highlight-card {
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-btn {
+    background: var(--primary-green);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.6s ease;
+}
+
+.plan-btn:hover {
+    transform: scale(1.1);
+    background: var(--dark-green);
+    color: white;
+}
+
+/* Animal Cards */
+.animal-card {
+    transition: transform 0.5s ease;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.animal-card:hover {
+    transform: scale(1.1);
+}
+
+.animal-1 {
+    background-image: url('images/KingOfTheJungle.png');
+}
+
+.animal-2 {
+    background-image: url('images/GentleGaints.png');
+}
+
+.animal-3 {
+    background-image: url('images/FeatheredFriends.png');
+}
+
+.animal-4 {
+    background-image: url('images/Cold-Blooded.png');
+}
+
+.animal-5 {
+    background-image: url('images/AquaticMarvels.png');
+}
+
+.animal-6 {
+    background-image: url('images/HiddenSpecies.png');
+}
+
+.girafe-image {
+    background-image: url('images/girafe.png');
+    height: 300px;
+}
+
+/* Carousel Fix */
+.carousel-section {
+    position: relative;
+    z-index: 2;
+    margin: 50px 0;
+}
+
+#zooCarousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 600px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block !important;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 15;
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 2px solid transparent !important;
+    margin: 0 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.carousel-indicators button.active {
+    background-color: #fff !important;
+    transform: scale(1.2);
+    border-color: var(--primary-green) !important;
+}
+
+.carousel-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px !important;
+    height: 60px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    opacity: 0.8 !important;
+    transition: all 0.3s ease !important;
+    margin: 0 20px !important;
+}
+
+.carousel-control-prev {
+    left: 20px !important;
+}
+
+.carousel-control-next {
+    right: 20px !important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1 !important;
+    background: rgba(255, 255, 255, 1) !important;
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 25px !important;
+    height: 25px !important;
+    background-size: 25px 25px !important;
+    filter: invert(25%) sepia(91%) saturate(2581%) hue-rotate(87deg) brightness(94%) contrast(83%) !important;
+}
+
+/* Carousel Animation */
+.carousel-item {
+    transition: transform 0.8s ease-in-out !important;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none !important;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+/* Responsive Carousel */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 10px !important;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px !important;
+        height: 20px !important;
+        background-size: 20px 20px !important;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+    }
+    
+    .carousel-indicators button {
+        width: 10px !important;
+        height: 10px !important;
+        margin: 0 6px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 16px !important;
+        height: 16px !important;
+        background-size: 16px 16px !important;
+    }
+}
+
+
+/* Steps */
+.step-number {
+    background: var(--primary-green);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Gallery */
+.gallery-img {
+    width: 200px;
+    height: auto;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Tickets */
+.ticket-card {
+    background: var(--light-green);
+    border-radius: 10px;
+    color: white;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.ticket-card:hover {
+    transform: scale(1.05);
+}
+
+.accordion-header {
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header .bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header[aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Modal */
+.welcome-modal .modal-content {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #2fe035;
+    border: 1px solid #888;
+    border-radius: 10px;
+}
+
+.welcome-modal .btn-close {
+    background: transparent;
+}
+
+/* Filters */
+.btn-outline-success {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+    transform: scale(1.05);
+}
+
+/* Form controls */
+.form-check-input:checked {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+    
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .gallery-img {
+        width: 150px;
+        margin: 5px;
+    }
+    
+    .custom-navbar {
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 1.8rem;
+    }
+    
+    .animal-card {
+        height: 200px;
+    }
+    
+    .gallery-img {
+        width: 120px;
+        padding: 10px;
+    }
+}
+
+.animal-card {
+    z-index: 1 !important;
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.gallery-img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    position: relative !important;
+}
+
+.carousel-item img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+}
+
+.highlight-card img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+}
+
+/* Force image visibility */
+img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Specific image containers */
+.animal-card[style*="background-image"] {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Override any hiding */
+.animal-card,
+.gallery-img,
+.carousel-item img,
+.highlight-card img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Remove any potential overlays */
+.animal-card::before,
+.animal-card::after,
+.gallery-img::before,
+.gallery-img::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Ensure image containers are visible */
+.col-md-6 .animal-card,
+.col-lg-4 .animal-card,
+.gallery-item,
+.carousel-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
